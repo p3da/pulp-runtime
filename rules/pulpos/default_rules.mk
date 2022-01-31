@@ -46,6 +46,11 @@ PULP_APP_CFLAGS += -I$(PULPRT_HOME)/lib/libc/minimal/include
 endif
 PULP_APP_CFLAGS += -I$(PULPRT_HOME)/include -I$(PULPRT_HOME)/kernel
 
+# add uip to include dir
+PULP_APP_CFLAGS += -I$(PULPRT_HOME)/lib/uip
+
+PULP_APP_CFLAGS += -I$(PULPRT_HOME)/include/archi/udma/eth_frame
+
 PULP_APP_CFLAGS += $(foreach inc,$(PULPOS_MODULES),-I$(inc)/include)
 
 ifdef PULPRUN_PLATFORM

@@ -8,6 +8,12 @@ endif
 
 PULP_SRCS += kernel/init.c kernel/kernel.c kernel/alloc.c kernel/alloc_pool.c kernel/irq.c kernel/soc_event.c kernel/bench.c drivers/uart.c
 
+# uip sources
+PULP_SRCS += lib/uip/uip_arp.c lib/uip/uip.c lib/uip/uiplib.c
+
+# ethernet driver
+PULP_SRCS += drivers/eth_frame.c
+
 PULP_ASM_SRCS += kernel/irq_asm.S
 
 
