@@ -94,7 +94,7 @@
  *
  * \hideinitializer
  */
-#define UIP_FIXEDADDR    0
+#define UIP_FIXEDADDR    1
 
 /**
  * Ping IP address asignment.
@@ -124,7 +124,7 @@
  *
  * \hideinitializer
  */
-#define UIP_FIXEDETHADDR 0
+#define UIP_FIXEDETHADDR 1
 
 /** @} */
 /*------------------------------------------------------------------------------*/
