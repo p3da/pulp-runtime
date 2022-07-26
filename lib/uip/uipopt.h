@@ -138,7 +138,7 @@
  *
  * This should normally not be changed.
  */
-#define UIP_TTL         64
+#define UIP_TTL         40
 
 /**
  * Turn on support for IP packet reassembly.
@@ -160,7 +160,7 @@
  * buffer before it is dropped.
  *
  */
-#define UIP_REASS_MAXAGE 40
+#define UIP_REASS_MAXAGE 500
 
 /** @} */
 
@@ -376,7 +376,7 @@
  * \hideinitializer
  */
 #ifndef UIP_CONF_BUFFER_SIZE
-#define UIP_BUFSIZE     400
+#define UIP_BUFSIZE     2048
 #else /* UIP_CONF_BUFFER_SIZE */
 #define UIP_BUFSIZE UIP_CONF_BUFFER_SIZE
 #endif /* UIP_CONF_BUFFER_SIZE */
@@ -405,7 +405,7 @@
  * \hideinitializer
  */
 #ifndef UIP_CONF_LOGGING
-#define UIP_LOGGING     0
+#define UIP_LOGGING     1
 #else /* UIP_CONF_LOGGING */
 #define UIP_LOGGING     UIP_CONF_LOGGING
 #endif /* UIP_CONF_LOGGING */

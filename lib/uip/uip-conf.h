@@ -28,7 +28,10 @@ typedef uint16_t uip_stats_t;
 #define UIP_CONF_UDP 1
 
 /* maximum number of UDP connections */
-#define UIP_CONF_UDP_CONNS 5
+#define UIP_CONF_UDP_CONNS 10
+
+/* udp checksums are not supported by default in uIP */
+#define UIP_CONF_UDP_CHECKSUMS 0
 
 /* maximum tcp connections */
 #define UIP_CONF_MAX_CONNECTIONS 2
@@ -40,13 +43,13 @@ typedef uint16_t uip_stats_t;
 #define UIP_CONF_ARPTAB_SIZE 8
 
 /* does not need to be larger than 2048 bytes */
-#define UIP_CONF_BUFSIZE 2048
+#define UIP_CONF_BUFSIZE 8192
 
 /* for debugging purposes; not used here */
 #define UIP_CONF_STATISTICS 0
 
 /* do not log any events */
-#define UIP_CONF_LOGGING 0
+#define UIP_CONF_LOGGING 1
 
 /* offset in uip_buf where IP header is located (6byte dest mac, 6 byte src mac, 2 eth type) */
 /* might be neccessary to be changed if vlan tags or security tags are used */
@@ -75,12 +78,12 @@ typedef u16_t uip_udp_appstate_t;
 #define UIP_IPADDR0 192
 #define UIP_IPADDR1 168
 #define UIP_IPADDR2 0
-#define UIP_IPADDR3 128
+#define UIP_IPADDR3 2
 
 #define UIP_DRIPADDR0 192
 #define UIP_DRIPADDR1 168
 #define UIP_DRIPADDR2 0
-#define UIP_DRIPADDR3 10
+#define UIP_DRIPADDR3 3
 
 #define UIP_NETMASK0 255
 #define UIP_NETMASK1 255
